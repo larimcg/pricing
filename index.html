@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Paquetes & Precios — Registered Agent + Formación de Empresas</title>
+  <meta name="description" content="Paquetes y precios para Registered Agent, dirección comercial virtual, creación de LLC/Corp, ITIN, páginas web y soporte bancario en EE. UU." />
   <script src="https://cdn.tailwindcss.com"></script>
-  <meta name="description" content="Paquetes y precios para Registered Agent, dirección comercial virtual, creación de LLC/Corp, ITIN, páginas web y soporte bancario en EE. UU.">
+  <style>
+    .tab-active{background:#0f172a;color:#fff;border-color:#0f172a}
+    .tab-inactive{background:#fff;color:#0f172a;border-color:#e2e8f0}
+    .sticky-cta{backdrop-filter:saturate(180%) blur(8px)}
+    .price-pill{transition:transform .2s ease}
+    .price-pill:hover{transform:translateY(-2px)}
+    .accordion-btn[aria-expanded="true"] .chev{transform:rotate(180deg)}
+    .float-whats{box-shadow:0 6px 20px rgba(0,0,0,.2)}
+  </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- Sticky top contact -->
+  <div class="sticky top-0 z-50 sticky-cta border-b border-slate-200 bg-white/90">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4 text-sm">
+      <span class="hidden md:inline">¿Dudas? Escríbenos o llama: <a href="tel:6783109294" class="font-semibold underline">678-310-9294</a></span>
+      <div class="flex items-center gap-2">
+        <button id="copyPhone" class="px-3 py-1.5 rounded-lg border border-slate-300 hover:bg-slate-100">📋 Copiar teléfono</button>
+        <a href="tel:6783109294" class="px-3 py-1.5 rounded-lg border border-slate-300 hover:bg-slate-100">📞 Llamar</a>
+        <a href="https://wa.me/16783109294" target="_blank" class="px-3 py-1.5 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700">💬 WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
   <!-- Hero -->
   <header class="bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-6 py-10">
@@ -18,9 +40,12 @@
             Paquetes integrales para emprendedores en EE. UU. y el exterior: LLC / Corp, Registered Agent, dirección comercial, ITIN, web, email y guía bancaria.
           </p>
         </div>
-        <div class="shrink-0">
-          <a href="https://wa.me/16783109294" class="inline-flex items-center justify-center rounded-2xl border border-transparent bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800 transition">
-            📲 WhatsApp / Llamar
+        <div class="shrink-0 flex gap-2">
+          <a href="tel:6783109294" class="inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold hover:bg-slate-50 transition">
+            📞 Llamar 678-310-9294
+          </a>
+          <a href="https://wa.me/16783109294" class="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800 transition">
+            📲 WhatsApp
           </a>
         </div>
       </div>
@@ -28,15 +53,28 @@
   </header>
 
   <main>
-    <!-- Paquetes destacados con ITIN -->
-    <section class="py-12 md:py-16">
+    <!-- Tabs -->
+    <section class="py-8">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-wrap gap-2">
+          <button class="tab-btn tab-active px-4 py-2 rounded-xl border" data-tab="tab-itin">ITIN + LLC</button>
+          <button class="tab-btn tab-inactive px-4 py-2 rounded-xl border" data-tab="tab-llc">LLC (sin ITIN)</button>
+          <button class="tab-btn tab-inactive px-4 py-2 rounded-xl border" data-tab="tab-corp">Corporaciones</button>
+          <button class="tab-btn tab-inactive px-4 py-2 rounded-xl border" data-tab="tab-a-la-carta">Servicios individuales</button>
+          <button class="tab-btn tab-inactive px-4 py-2 rounded-xl border" data-tab="tab-renov">Renovaciones</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ITIN Packages -->
+    <section id="tab-itin" class="tab-panel block">
       <div class="max-w-7xl mx-auto px-6">
         <h2 class="text-2xl md:text-3xl font-bold">Paquetes con ITIN (clientes internacionales)</h2>
         <p class="mt-2 text-slate-600">Incluyen todo lo necesario para operar legalmente sin SSN.</p>
 
         <div class="mt-8 grid md:grid-cols-3 gap-6">
           <!-- Basic -->
-          <div class="rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 p-6 flex flex-col">
+          <div class="rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 p-6 flex flex-col price-pill">
             <div class="flex items-baseline justify-between gap-4">
               <h3 class="text-xl font-bold">LLC + ITIN Basic</h3>
               <div class="text-right">
@@ -45,12 +83,12 @@
               </div>
             </div>
             <ul class="mt-5 space-y-3 text-sm leading-6">
-              <li class="flex gap-2"><span>✅</span><span>Registro de LLC</span></li>
-              <li class="flex gap-2"><span>✅</span><span>EIN (IRS)</span></li>
-              <li class="flex gap-2"><span>✅</span><span>Operating Agreement</span></li>
-              <li class="flex gap-2"><span>✅</span><span>Registered Agent 1 año</span></li>
-              <li class="flex gap-2"><span>✅</span><span>Dirección Comercial 1 año</span></li>
-              <li class="flex gap-2"><span>✅</span><span>Trámite de ITIN (CAA subcontratado)</span></li>
+              <li>✅ Registro de LLC</li>
+              <li>✅ EIN (IRS)</li>
+              <li>✅ Operating Agreement</li>
+              <li>✅ Registered Agent 1 año</li>
+              <li>✅ Dirección Comercial 1 año</li>
+              <li>✅ Trámite de ITIN (CAA subcontratado)</li>
             </ul>
             <div class="mt-6 pt-6 border-t border-slate-200 text-xs text-slate-500">
               * No incluye tarifas estatales.
@@ -58,7 +96,7 @@
           </div>
 
           <!-- Pro -->
-          <div class="rounded-3xl bg-white shadow-lg ring-2 ring-slate-900 p-6 flex flex-col relative">
+          <div class="rounded-3xl bg-white shadow-lg ring-2 ring-slate-900 p-6 flex flex-col relative price-pill">
             <span class="absolute -top-3 right-6 rounded-full bg-slate-900 text-white text-xs font-semibold px-3 py-1">Más popular</span>
             <div class="flex items-baseline justify-between gap-4">
               <h3 class="text-xl font-bold">LLC + ITIN Pro</h3>
@@ -68,10 +106,10 @@
               </div>
             </div>
             <ul class="mt-5 space-y-3 text-sm leading-6">
-              <li class="flex gap-2"><span>✅</span><span>Todo de <strong>Basic</strong></span></li>
-              <li class="flex gap-2"><span>✅</span><span>Página web básica (1 página)</span></li>
-              <li class="flex gap-2"><span>✅</span><span>Email corporativo (setup)</span></li>
-              <li class="flex gap-2"><span>✅</span><span>Guía bancaria (Bluevine, Mercury, Relay)</span></li>
+              <li>✅ Todo de <strong>Basic</strong></li>
+              <li>✅ Página web básica (1 página)</li>
+              <li>✅ Email corporativo (setup)</li>
+              <li>✅ Guía bancaria (Bluevine, Mercury, Relay)</li>
             </ul>
             <div class="mt-6 pt-6 border-t border-slate-200 text-xs text-slate-500">
               * No incluye tarifas estatales ni suscripciones de terceros.
@@ -79,7 +117,7 @@
           </div>
 
           <!-- Premium Full -->
-          <div class="rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 p-6 flex flex-col">
+          <div class="rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 p-6 flex flex-col price-pill">
             <div class="flex items-baseline justify-between gap-4">
               <h3 class="text-xl font-bold">LLC + ITIN Premium Full</h3>
               <div class="text-right">
@@ -88,9 +126,9 @@
               </div>
             </div>
             <ul class="mt-5 space-y-3 text-sm leading-6">
-              <li class="flex gap-2"><span>✅</span><span>Todo de <strong>Pro</strong></span></li>
-              <li class="flex gap-2"><span>✅</span><span>Configuración Stripe/PayPal (soporte)</span></li>
-              <li class="flex gap-2"><span>✅</span><span>Plantillas de contratos básicos</span></li>
+              <li>✅ Todo de <strong>Pro</strong></li>
+              <li>✅ Configuración Stripe/PayPal (soporte)</li>
+              <li>✅ Plantillas de contratos básicos</li>
             </ul>
             <div class="mt-6 pt-6 border-t border-slate-200 text-xs text-slate-500">
               * No incluye tarifas estatales ni suscripciones de terceros.
@@ -100,28 +138,264 @@
       </div>
     </section>
 
-    <!-- Contacto con número y WhatsApp -->
+    <!-- LLC (no ITIN) -->
+    <section id="tab-llc" class="tab-panel hidden">
+      <div class="max-w-7xl mx-auto px-6 py-6">
+        <h2 class="text-2xl md:text-3xl font-bold">Paquetes LLC (sin ITIN)</h2>
+        <p class="mt-2 text-slate-600">Para clientes con SSN o que no requieren ITIN.</p>
+
+        <div class="mt-8 grid md:grid-cols-3 gap-6">
+          <!-- Starter -->
+          <div class="rounded-3xl bg-slate-50 ring-1 ring-slate-200 p-6 price-pill">
+            <div class="flex items-baseline justify-between gap-4">
+              <h3 class="text-xl font-bold">LLC Starter</h3>
+              <div class="text-right">
+                <div class="text-3xl font-extrabold">$499</div>
+                <div class="text-xs text-slate-500">Pago único</div>
+              </div>
+            </div>
+            <ul class="mt-5 space-y-3 text-sm leading-6">
+              <li>✅ Registro LLC (GA)</li>
+              <li>✅ EIN</li>
+              <li>✅ Operating Agreement</li>
+              <li>✅ Registered Agent 1 año</li>
+              <li>✅ Dirección Comercial 1 año</li>
+            </ul>
+          </div>
+
+          <!-- Pro -->
+          <div class="rounded-3xl bg-slate-50 ring-1 ring-slate-200 p-6 price-pill">
+            <div class="flex items-baseline justify-between gap-4">
+              <h3 class="text-xl font-bold">LLC Pro</h3>
+              <div class="text-right">
+                <div class="text-3xl font-extrabold">$699</div>
+                <div class="text-xs text-slate-500">Pago único</div>
+              </div>
+            </div>
+            <ul class="mt-5 space-y-3 text-sm leading-6">
+              <li>✅ Todo de <strong>Starter</strong></li>
+              <li>✅ Página web básica (1 página)</li>
+              <li>✅ Email corporativo (setup)</li>
+              <li>✅ Guía bancaria</li>
+            </ul>
+          </div>
+
+          <!-- Premium -->
+          <div class="rounded-3xl bg-slate-50 ring-1 ring-slate-200 p-6 price-pill">
+            <div class="flex items-baseline justify-between gap-4">
+              <h3 class="text-xl font-bold">LLC Premium</h3>
+              <div class="text-right">
+                <div class="text-3xl font-extrabold">$799</div>
+                <div class="text-xs text-slate-500">Pago único</div>
+              </div>
+            </div>
+            <ul class="mt-5 space-y-3 text-sm leading-6">
+              <li>✅ Todo de <strong>Pro</strong></li>
+              <li>✅ Soporte para Stripe/PayPal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Corporaciones -->
+    <section id="tab-corp" class="tab-panel hidden">
+      <div class="max-w-7xl mx-auto px-6 py-6">
+        <h2 class="text-2xl md:text-3xl font-bold">Paquetes Corporación (C-Corp / S-Corp)</h2>
+        <p class="mt-2 text-slate-600">Ideal para startups que buscan inversión o estructura accionaria.</p>
+
+        <div class="mt-8 grid md:grid-cols-3 gap-6">
+          <!-- Starter -->
+          <div class="rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 p-6 price-pill">
+            <div class="flex items-baseline justify-between gap-4">
+              <h3 class="text-xl font-bold">Corporation Starter</h3>
+              <div class="text-right">
+                <div class="text-3xl font-extrabold">$549</div>
+                <div class="text-xs text-slate-500">Pago único</div>
+              </div>
+            </div>
+            <ul class="mt-5 space-y-3 text-sm leading-6">
+              <li>✅ Registro de Corporación</li>
+              <li>✅ EIN</li>
+              <li>✅ Bylaws</li>
+              <li>✅ Registered Agent 1 año</li>
+              <li>✅ Dirección Comercial 1 año</li>
+            </ul>
+          </div>
+
+          <!-- Pro -->
+          <div class="rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 p-6 price-pill">
+            <div class="flex items-baseline justify-between gap-4">
+              <h3 class="text-xl font-bold">Corporation Pro</h3>
+              <div class="text-right">
+                <div class="text-3xl font-extrabold">$799</div>
+                <div class="text-xs text-slate-500">Pago único</div>
+              </div>
+            </div>
+            <ul class="mt-5 space-y-3 text-sm leading-6">
+              <li>✅ Todo de <strong>Starter</strong></li>
+              <li>✅ Página web básica (1 página)</li>
+              <li>✅ Email corporativo (setup)</li>
+              <li>✅ Guía bancaria</li>
+            </ul>
+          </div>
+
+          <!-- Premium Full -->
+          <div class="rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 p-6 price-pill">
+            <div class="flex items-baseline justify-between gap-4">
+              <h3 class="text-xl font-bold">Corporation Premium Full</h3>
+              <div class="text-right">
+                <div class="text-3xl font-extrabold">$999</div>
+                <div class="text-xs text-slate-500">Pago único</div>
+              </div>
+            </div>
+            <ul class="mt-5 space-y-3 text-sm leading-6">
+              <li>✅ Todo de <strong>Pro</strong></li>
+              <li>✅ Soporte Stripe/PayPal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- A la carta -->
+    <section id="tab-a-la-carta" class="tab-panel hidden">
+      <div class="max-w-7xl mx-auto px-6 py-6">
+        <h2 class="text-2xl md:text-3xl font-bold">Servicios individuales</h2>
+
+        <!-- Toggle mensual/anual para Dirección Comercial -->
+        <div class="mt-4 flex items-center gap-3 text-sm">
+          <span>Dirección Comercial:</span>
+          <label class="inline-flex items-center gap-2 cursor-pointer">
+            <span>Mensual</span>
+            <input id="dirToggle" type="checkbox" class="sr-only">
+            <span class="w-12 h-6 rounded-full bg-slate-300 relative after:content-[''] after:absolute after:w-5 after:h-5 after:bg-white after:rounded-full after:top-0.5 after:left-0.5 after:transition-all after:shadow"></span>
+            <span>Anual</span>
+          </label>
+          <span id="dirPrice" class="ml-2 px-2 py-1 rounded-full bg-slate-900 text-white"> $15 / mes </span>
+        </div>
+
+        <div class="mt-6 grid md:grid-cols-2 gap-6">
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <ul class="space-y-2 text-sm leading-6">
+              <li>• Registered Agent — <strong>$99/año</strong></li>
+              <li>• Dirección Comercial Virtual — <strong id="dirLabel">$15/mes</strong> <span class="text-slate-500">(o $149/año)</span></li>
+              <li>• Registro LLC/Corp — <strong>$150</strong> + tarifas estatales</li>
+              <li>• EIN — <strong>$75</strong></li>
+              <li>• Operating Agreement (LLC) — <strong>$99</strong></li>
+              <li>• Bylaws (Corp) — <strong>$129</strong></li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <ul class="space-y-2 text-sm leading-6">
+              <li>• Página web básica — <strong>$299</strong></li>
+              <li>• Email corporativo (setup) — <strong>$25</strong> (+ plan)</li>
+              <li>• Guía bancaria (Bluevine, Mercury, Relay) — <strong>$49</strong></li>
+              <li>• Trámite ITIN (CAA subcontratado) — <strong>$499</strong></li>
+              <li>• Consultoría 1 hora (Zoom) — <strong>$75</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Renovaciones -->
+    <section id="tab-renov" class="tab-panel hidden">
+      <div class="max-w-7xl mx-auto px-6 py-6">
+        <h2 class="text-2xl md:text-3xl font-bold">Renovaciones & mantenimiento</h2>
+        <div class="mt-6 grid md:grid-cols-2 gap-6">
+          <div class="rounded-2xl border border-slate-200 bg-white p-6">
+            <ul class="space-y-2 text-sm leading-6">
+              <li>• Renovación Registered Agent — <strong>$99/año</strong></li>
+              <li>• Renovación Dirección Comercial — <strong>$149/año</strong></li>
+              <li>• Annual Report (GA) — <strong>$75</strong> + state fee ($50)</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-6">
+            <ul class="space-y-2 text-sm leading-6">
+              <li>• Actualización Operating Agreement/Bylaws — <strong>$99</strong></li>
+              <li>• Mantenimiento web — <strong>$25/mes</strong> o <strong>$250/año</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ (acordeón) -->
+    <section class="py-12 md:py-16 bg-white border-y border-slate-200">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-2xl md:text-3xl font-bold">Preguntas frecuentes</h2>
+        <div class="mt-6 space-y-3">
+          <!-- Item -->
+          <button class="accordion-btn w-full text-left p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 transition flex justify-between items-center" aria-expanded="false">
+            <span class="font-semibold">¿Qué incluye exactamente el servicio de Registered Agent?</span>
+            <span class="chev transition-transform">⌄</span>
+          </button>
+          <div class="accordion-panel hidden px-4 pb-4 text-sm text-slate-600">
+            Recepción de correspondencia legal/estatal en horario laboral, notificación rápida por email/WhatsApp y resguardo seguro. No incluye asesoría legal.
+          </div>
+
+          <button class="accordion-btn w-full text-left p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 transition flex justify-between items-center" aria-expanded="false">
+            <span class="font-semibold">¿Puedo contratar solo la dirección comercial sin RA?</span>
+            <span class="chev transition-transform">⌄</span>
+          </button>
+          <div class="accordion-panel hidden px-4 pb-4 text-sm text-slate-600">
+            Sí. La dirección comercial sirve para tu LLC, tarjetas, web y listados. El RA es para documentos oficiales/legales del estado.
+          </div>
+
+          <button class="accordion-btn w-full text-left p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 transition flex justify-between items-center" aria-expanded="false">
+            <span class="font-semibold">¿El ITIN lo tramitan ustedes directamente?</span>
+            <span class="chev transition-transform">⌄</span>
+          </button>
+          <div class="accordion-panel hidden px-4 pb-4 text-sm text-slate-600">
+            Coordinamos tu caso con un CAA (Certifying Acceptance Agent) certificado. Te guiamos en todo el proceso.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
     <section id="contacto" class="py-12 md:py-16 bg-slate-900 text-white">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <h2 class="text-2xl md:text-3xl font-extrabold">¿Listo para crear tu empresa en EE. UU.?</h2>
-            <p class="mt-3 opacity-90">Escríbenos y te guiamos paso a paso. Atención en español e inglés.</p>
+            <p class="mt-3 opacity-90">Atención en español e inglés. Te guiamos paso a paso.</p>
             <p class="mt-4 text-lg">
-              También puedes escribirnos o llamarnos directamente al 
-              <a href="tel:6783109294" class="underline hover:text-slate-300">678-310-9294</a> 
+              Escríbenos o llama al 
+              <a href="tel:6783109294" class="underline">678-310-9294</a> 
               (WhatsApp disponible).
             </p>
           </div>
-          <div class="flex md:justify-end">
+          <div class="flex md:justify-end gap-3">
+            <a href="tel:6783109294" class="inline-flex items-center justify-center rounded-2xl border border-slate-300 bg-white/10 px-5 py-3 font-semibold text-white hover:bg-white/20 transition">
+              📞 Llamar
+            </a>
             <a href="https://wa.me/16783109294" class="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 font-semibold text-slate-900 hover:bg-slate-100 transition">
-              📲 WhatsApp / Llamar
+              📲 WhatsApp
             </a>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Note -->
+    <section class="py-10">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="rounded-2xl bg-slate-100 border border-slate-200 p-6 text-sm text-slate-600">
+          <p><strong>Nota:</strong> Los precios no incluyen tarifas estatales, ni suscripciones de terceros (Google Workspace, hosting, etc.). El trámite de ITIN es realizado por un CAA certificado subcontratado. Este material es informativo y no constituye asesoría legal ni fiscal.</p>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/16783109294" class="fixed bottom-6 right-6 float-whats inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-600 text-white hover:bg-emerald-700" aria-label="WhatsApp">
+    💬
+  </a>
+
+  <!-- Back to top -->
+  <button id="backTop" class="hidden fixed bottom-6 left-6 w-12 h-12 rounded-full bg-slate-900 text-white hover:bg-slate-800">↑</button>
 
   <footer class="py-10">
     <div class="max-w-7xl mx-auto px-6 text-sm text-slate-500">
@@ -130,7 +404,86 @@
   </footer>
 
   <script>
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Tabs
+    const tabs = document.querySelectorAll('.tab-btn');
+    const panels = document.querySelectorAll('.tab-panel');
+    tabs.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        tabs.forEach(b=>b.classList.remove('tab-active')); 
+        tabs.forEach(b=>b.classList.add('tab-inactive'));
+        btn.classList.add('tab-active'); 
+        btn.classList.remove('tab-inactive');
+        const id = btn.dataset.tab;
+        panels.forEach(p=>p.classList.add('hidden'));
+        document.getElementById(id).classList.remove('hidden');
+      })
+    });
+
+    // Accordion
+    document.querySelectorAll('.accordion-btn').forEach(b=>{
+      b.addEventListener('click',()=>{
+        const expanded = b.getAttribute('aria-expanded') === 'true';
+        b.setAttribute('aria-expanded', String(!expanded));
+        const panel = b.nextElementSibling;
+        panel.classList.toggle('hidden');
+      })
+    });
+
+    // Back to top
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', ()=>{
+      backTop.classList.toggle('hidden', window.scrollY < 400);
+    });
+    backTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+    // Copy phone
+    document.getElementById('copyPhone')?.addEventListener('click', async ()=>{
+      try{
+        await navigator.clipboard.writeText('6783109294');
+        const btn = document.getElementById('copyPhone');
+        const prev = btn.textContent;
+        btn.textContent = '✅ Copiado';
+        setTimeout(()=>btn.textContent = prev, 1200);
+      }catch(e){}
+    });
+
+    // Toggle Dirección Comercial precio
+    const toggle = document.getElementById('dirToggle');
+    const price = document.getElementById('dirPrice');
+    const label = document.getElementById('dirLabel');
+    toggle?.addEventListener('change', ()=>{
+      if(toggle.checked){
+        price.textContent = ' $149 / año ';
+        label.textContent = '$149/año';
+        toggle.nextElementSibling.style.setProperty('--x', '1');
+        toggle.nextElementSibling.querySelector('span')
+      } else {
+        price.textContent = ' $15 / mes ';
+        label.textContent = '$15/mes';
+      }
+      // mover knob
+      const knob = toggle.nextElementSibling;
+      knob.classList.toggle('on');
+      knob.querySelector('span');
+      knob.style.setProperty('--knob', toggle.checked ? '1' : '0');
+      knob.firstElementChild;
+      knob.style.position='relative';
+      knob.innerHTML = '';
+      const inner = document.createElement('span');
+      inner.style.position='absolute';
+      inner.style.top='4px';
+      inner.style.left= toggle.checked ? '28px' : '4px';
+      inner.style.width='20px';
+      inner.style.height='20px';
+      inner.style.background='#fff';
+      inner.style.borderRadius='9999px';
+      inner.style.transition='left .2s ease';
+      knob.appendChild(inner);
+      setTimeout(()=>{ inner.style.left = toggle.checked ? '28px' : '4px' }, 0);
+    });
   </script>
 </body>
 </html>
